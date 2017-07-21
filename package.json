@@ -1,0 +1,35 @@
+{
+  "name": "kao-yar",
+  "version": "0.0.1",
+  "description": "Yet another router for koa",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "dev": "tsc -w -p .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/arusakov/koa-yar.git"
+  },
+  "keywords": [
+    "koa",
+    "koa2",
+    "route",
+    "router",
+    "speed"
+  ],
+  "author": "Alexander Rusakov <a_s_rusakov@mail.ru> (https://github.com/arusakov)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arusakov/koa-yar/issues"
+  },
+  "homepage": "https://github.com/arusakov/koa-yar#readme",
+  "devDependencies": {
+    "@types/koa": "2.0.39",
+    "koa": "2.3.0",
+    "typescript": "2.4.2"
+  }
+}
