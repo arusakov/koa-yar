@@ -1,11 +1,11 @@
 
-type KoaCtx = {
+export type KoaCtx = {
   method: string,
   params?: any,
   path: string,
 }
 
-type KoaNext = (ctx: KoaCtx, next?: KoaNext) => any
+export type KoaNext = (ctx: KoaCtx, next?: KoaNext) => any
 
 type Handler = {
   method: string,
