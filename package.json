@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "codecov": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
-    "coverage": "nyc --exclude server.js npm test",
+    "coverage": "nyc -x server.js -x tests.js npm test",
     "test": "mocha tests.js",
     "travis": "npm run coverage && npm run codecov"
   },
