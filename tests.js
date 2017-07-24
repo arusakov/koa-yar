@@ -28,4 +28,8 @@ describe('koa-yar', () => {
     await supertest(server).get('/xxx').expect(404)
   })
 
+  it('GET many slashes', async () => {
+    await supertest(server).get('/ma/ny/sla/shes').expect(200, 'GET many slashes')
+  })
+
 })

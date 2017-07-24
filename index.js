@@ -32,18 +32,33 @@ class Router {
     const dict2 = {}
     Object.keys(dict1).forEach((method) => {
       const handlers = dict1[method]
-      const reAsString = '/' + handlers
+      const params = []
+      let reAsString = handlers
         .map(h => h.path
             .replace(/^\//, '') // remove first slash
-            .replace(/\//g, '\\/')
+            .replace(/(\/)|(?::([^/]))/g, (m, slash, param) => {
+              if (slash) {
+                return '\\/'
+              }
+              if (param) {
+                params.push(param)
+                return '([^\/]+)'
+              }
+              return m
+            })
         )
         .map(s => '(' + s + ')') // group in regexp
         .join('|');
 
+      reAsString = '^/(?:' + reAsString + ')'
+      console.log(reAsString)
 
       dict2[method] = {
         re: new RegExp(reAsString, 'i'),
-        groups: handlers.map(h => ({ cb: h.cb })),
+        groups: handlers.map(h => ({
+          cb: h.cb,
+          params,
+        })),
       }
     })
 
