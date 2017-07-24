@@ -1,7 +1,8 @@
 const { createServer } = require('http')
 
 const Koa = require('koa')
-const { Router } = require('.')
+
+const { Router } = require('./index')
 // const Router = require('koa-router')
 
 const app = new Koa()
