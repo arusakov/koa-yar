@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}/server-example.js",
+            "program": "${workspaceRoot}/server.js",
             "outFiles": [
                 "${workspaceRoot}/*.js"
             ],

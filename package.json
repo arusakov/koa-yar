@@ -4,13 +4,12 @@
   "description": "Yet another router for koa",
   "main": "index.js",
   "files": [
-    "index.js",
-    "index.d.ts"
+    "index.js"
   ],
   "scripts": {
-    "dev": "tsc -w -p .",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublishOnly": "tsc -d -p ."
+    "cover": "nyc --exclude server.js npm test",
+    "prepublishOnly": "tsc -d -p .",
+    "test": "mocha tests.js"
   },
   "repository": {
     "type": "git",
@@ -30,9 +29,10 @@
   },
   "homepage": "https://github.com/arusakov/koa-yar#readme",
   "devDependencies": {
-    "@types/koa": "2.0.39",
     "koa": "2.3.0",
     "koa-router": "7.2.1",
-    "typescript": "2.4.2"
+    "mocha": "3.4.2",
+    "nyc": "11.0.3",
+    "supertest": "3.0.0"
   }
 }
