@@ -10,6 +10,12 @@ describe('koa-yar', () => {
   it('POST /1', async () => {
     await supertest(server).post('/1').expect(200, 'POST 1')
   })
+  it('PUT /1', async () => {
+    await supertest(server).put('/1').expect(200, 'PUT 1')
+  })
+  it('DELETE /1', async () => {
+    await supertest(server).delete('/1').expect(200, 'DELETE 1')
+  })
 
   it('GET /2', async () => {
     await supertest(server).get('/2').expect(200, 'GET 2')

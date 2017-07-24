@@ -10,6 +10,8 @@ const router = new Router()
 
 router.get('/1', (ctx) => ctx.body = 'GET 1')
 router.post('/1', (ctx) => ctx.body = 'POST 1')
+router.put('/1', (ctx) => ctx.body = 'PUT 1')
+router.delete('/1', (ctx) => ctx.body = 'DELETE 1')
 
 router.get('/2', (ctx) => ctx.body = 'GET 2')
 
